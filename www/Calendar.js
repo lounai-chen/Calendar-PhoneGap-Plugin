@@ -13,7 +13,7 @@ var Calendar = {
       "endTime": endDate instanceof Date ? endDate.getTime() : null
     }])
   },
-  listCalendars = function (successCallback, errorCallback) {
+  listCalendars : function (successCallback, errorCallback) {
      exec(successCallback, errorCallback, "Calendar", "listCalendars", []);
   },
 }
