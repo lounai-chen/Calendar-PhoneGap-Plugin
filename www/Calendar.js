@@ -7,7 +7,7 @@ var Calendar = {
   hasReadPermission : function (successCallback, errorCallback) {
     exec(successCallback, errorCallback, "Calendar", "hasReadPermission", []);
   },
-  istEventsInRange: function (startDate, endDate, successCallback, errorCallback) {
+  listEventsInRange: function (startDate, endDate, successCallback, errorCallback) {
      exec(successCallback, errorCallback, "Calendar", "listEventsInRange", [{
       "startTime": startDate instanceof Date ? startDate.getTime() : null,
       "endTime": endDate instanceof Date ? endDate.getTime() : null
@@ -16,7 +16,7 @@ var Calendar = {
   listCalendars : function (successCallback, errorCallback) {
      exec(successCallback, errorCallback, "Calendar", "listCalendars", []);
   },
- createEventWithOptions : function (title, location, notes, startDate, endDate, options, successCallback, errorCallback) {
+  createEventWithOptions : function (title, location, notes, startDate, endDate, options, successCallback, errorCallback) {
     if (!(startDate instanceof Date && endDate instanceof Date)) {
       errorCallback("startDate and endDate must be JavaScript Date Objects");
       return;
