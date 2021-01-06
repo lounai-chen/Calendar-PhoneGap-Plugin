@@ -291,12 +291,10 @@ Calendar.prototype.parseEventDate = function (dateStr) {
 };
 
 Calendar.install = function () {
-  if (!window.plugins) {
-    window.plugins = {};
-  }
+  
 
-  window.plugins.calendar = new Calendar();
-  return window.plugins.calendar;
+   var plugin_calendar = new Calendar();
+  return  plugin_calendar;
 };
 
 cordova.addConstructor(Calendar.install);
